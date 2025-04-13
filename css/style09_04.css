@@ -1,0 +1,13 @@
+
+header > nav > ul > li{
+    color:orange;
+}
+
+footer li{
+    color: orange;
+}
+
+a[href="http://google.com"]
+{
+    color: red;
+}
