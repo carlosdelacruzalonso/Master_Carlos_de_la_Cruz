@@ -1,0 +1,77 @@
+/* RESET INICIAL */
+body {
+  padding: 0;
+  margin: 0;
+}
+
+/* ESTILOS DEL BODY */
+body {
+  background-image: url('https://i.postimg.cc/1516fJ1S/Word2002-SP2.png'), url('https://i.postimg.cc/zNdjjrkm/bd764bb25d49a05105060185774ba14cd2c846f7.webp');
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+  background-position: center center, center center;
+  background-attachment: fixed;
+  font-family: 'Tahoma', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* VENTANA */
+.window {
+  width: 90%;
+  max-width: 400px;
+  margin: 50px auto;
+  margin-top: -50px;
+}
+
+/* IMAGEN DEL CLIPPY */
+.clippy-img {
+  float: left;
+  margin-right: 10px;
+  height: 80px;
+  max-width: 100%;
+}
+
+/* TEXTO */
+p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* BOTÓN */
+.button-container {
+  margin-top: 20px;
+}
+
+/* MÓVIL */
+@media (max-width: 768px) {
+  body {
+    background-image: url('https://i.postimg.cc/zNdjjrkm/bd764bb25d49a05105060185774ba14cd2c846f7.webp'); /* Solo el fondo de windows XP por que el otro no queda bien */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .clippy-img {
+    height: 60px;
+  }
+
+  p {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .window {
+    margin-top: -70px;
+  }
+
+  .window-body {
+    padding: 10px;
+  }
+
+  .xp-button {
+    font-size: 12px;
+  }
+}
