@@ -1,0 +1,59 @@
+/*
+:root {
+    --primary-color: black;
+    --secondary-color: white;
+    --highlight-color: orange;
+    --error-color: red;
+    --spacing: 20px;
+    --primary-font: "Arial", sans-serif;
+}
+
+body {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    font-family: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--highlight-color);
+    padding: var(--spacing);
+}
+
+*/
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: crimson;
+    border: 2px solid black;
+    color: white;
+    flex-grow: 1;
+    align-self: self-start;
+}
+
+/*
+
+flex-direction: row; → Eje principal = horizontal (de izquierda a derecha)
+
+flex-direction: row-reverse; → Eje principal = horizontal (de derecha a izquierda)
+
+flex-direction: column; → Eje principal = vertical (de arriba hacia abajo)
+
+flex-direction: column-reverse; → Eje principal = vertical (de abajo hacia arriba)
+
+*/
+
+body {
+    display: flex;
+    flex-direction: row;
+    min-height: 400px;
+    border: 2px solid red;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
