@@ -1,0 +1,943 @@
+// EJERCICIO 1
+const miSuperheroeFavorito = "Hulk";
+const numeroFavorito = 50;
+const altura = 5;
+const longitud = 10;
+const suma = altura + longitud;
+
+console.log(miSuperheroeFavorito);
+console.log(numeroFavorito);
+console.log(altura);
+console.log(longitud);
+console.log(suma);
+
+// EJERCICIO 2
+// 2.1
+const jedi = {nombre: "Luke Skywalker", edad: 19};
+jedi.edad = 25;
+
+// 2.2
+const nombre = "Leia";
+const apellido = "Organa";
+const edad = 20;
+console.log("Soy " + nombre + " " + apellido + ", tengo " + edad + " años y soy una princesa de Alderaan.");
+
+// 2.3
+const sable1 = {nombre: "Shoto de Yoda", precio: 1500};
+const sable2 = {nombre: "Sable de Darth Vader", precio: 2000};
+const precioTotal = sable1.precio + sable2.precio;
+console.log(precioTotal);
+
+// 2.4
+let precioBaseGlobal = 25000;
+const nave1 = {nombre: "Ala-X", precioBase: 50000, precioFinal: 60000};
+const nave2 = {nombre: "Halcón Milenario", precioBase: 70000, precioFinal: 80000};
+nave1.precioFinal = nave1.precioBase + precioBaseGlobal;
+nave2.precioFinal = nave2.precioBase + precioBaseGlobal;
+
+// EJERCICIO 3
+// 3.1
+console.log(10 * 5);
+
+// 3.2
+console.log(10 / 2);
+
+// 3.3
+console.log(15 % 9);
+
+// 3.4
+let p = 10;
+let j = 5;
+let o = p + j;
+
+// 3.5
+let c = 10;
+let m = 5;
+let i = c * m;
+
+// EJERCICIO 4
+const aldeanos = ["Fibrilio", "Narciso", "Vacarena", "Tendo", "Nendo"];
+
+// 4.1
+console.log(aldeanos[3]);
+
+// 4.2
+aldeanos.push("Cervasio");
+
+// 4.3
+aldeanos[0] = "Bambina";
+
+// 4.4
+aldeanos.reverse();
+
+// 4.5
+const indiceNarciso = aldeanos.indexOf("Narciso");
+aldeanos[indiceNarciso] = "Canela";
+
+// 4.6
+console.log(aldeanos[aldeanos.length - 1]);
+
+// EJERCICIO 5
+const number1 = 10;
+const number2 = 20;
+const number3 = 2;
+
+if(number1 === 10){
+    console.log('number1 es estrictamente igual a 10')
+}
+
+if (number2 / number1 === 2) {
+  console.log("number2 dividido entre number1 es igual a 2");
+}
+
+if (number1 !== number2) {
+  console.log("number1 es estrictamente distinto a number2");
+}
+
+if (number3 != number1) {
+  console.log("number3 es distinto number1");
+}
+
+if (number3 * 5 === number1) {
+  console.log("number3 por 5 es igual a number1");
+}
+
+if (number3 * 5 === number1 && number1 * 2 === number2) {
+  console.log("number3 por 5 es igual a number1 Y number1 por 2 es igual a number2");
+}
+
+if (number2 / 2 === number1 || number1 / 5 === number3) {
+  console.log("number2 entre 2 es igual a number1 O number1 entre 5 es igual a number3");
+}
+
+// EJERCICIO 6
+// 1.1
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+// 1.2
+for (let i = 0; i < 10; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
+}
+
+// 1.3
+for (let i = 1; i <= 10; i++) {
+  if (i === 10) {
+    console.log('¡Dormido!');
+  } else {
+    console.log('Intentando dormir 🐑');
+  }
+}
+
+// EJERCICIO 7
+function greaterNumber(numberOne, numberTwo) {
+  if (numberOne > numberTwo) {
+    console.log(numberOne);
+  } else {
+    console.log(numberTwo);
+  }
+}
+
+// EJERCICIO 8
+const avengers = [
+  "Hulk",
+  "Thor",
+  "Iron Man",
+  "Captain A.",
+  "Spiderman",
+  "Captain M.",
+];
+
+function findLongestWord(stringList) {
+  let palabraLarga = stringList[0];
+  for (let i = 1; i < stringList.length; i++) {
+    if (stringList[i].length > palabraLarga.length) {
+      palabraLarga = stringList[i];
+    }
+  }
+  return palabraLarga;
+}
+
+// EJERCICIO 9
+const numbers = [1, 2, 3, 5, 45, 37, 58];
+
+function sumNumbers(numberList) {
+  let suma = 0;
+  for (let i = 0; i < numberList.length; i++) {
+    suma += numberList[i];
+  }
+  return suma;
+}
+
+// EJERCICIO 10
+const numbers2 = [12, 21, 38, 5, 45, 37, 6];
+
+function average(numberList) {
+  let suma = 0;
+  for (let i = 0; i < numberList.length; i++) {
+    suma += numberList[i];
+  }
+  return suma / numberList.length;
+}
+
+// EJERCICIO 11
+const mixedElements = [
+  6,
+  1,
+  "Marvel",
+  1,
+  "hamburguesa",
+  "10",
+  "Prometeo",
+  8,
+  "Hola mundo",
+];
+
+function averageWord(list) {
+  let suma = 0;
+  for (let i = 0; i < list.length; i++) {
+    if (typeof list[i] === "number") {
+      suma += list[i];
+    } else {
+      suma += list[i].length;
+    }
+  }
+  return suma;
+}
+
+// EJERCICIO 12
+const duplicates = [
+  'sushi',
+  'pizza',
+  'burger',
+  'potatoe',
+  'pasta',
+  'ice-cream',
+  'pizza',
+  'chicken',
+  'onion rings',
+  'pasta',
+  'soda'
+];
+
+function removeDuplicates(list) {
+  const sinDuplicados = [];
+  for (let i = 0; i < list.length; i++) {
+    if (!sinDuplicados.includes(list[i])) {
+      sinDuplicados.push(list[i]);
+    }
+  }
+  return sinDuplicados;
+}
+
+// EJERCICIO 13
+const names = [
+  'Peter',
+  'Steve',
+  'Tony',
+  'Natasha',
+  'Clint',
+  'Logan',
+  'Xabier',
+  'Bruce',
+  'Peggy',
+  'Jessica',
+  'Marc'
+];
+
+function nameFinder(nameList, nombreBuscar) {
+  for (let i = 0; i < nameList.length; i++) {
+    if (nameList[i] === nombreBuscar) {
+      return {existe: true, posicion: i};
+    }
+  }
+  return {existe: false};
+}
+
+// EJERCICIO 14
+const words = [
+  'code',
+  'repeat',
+  'eat',
+  'sleep',
+  'code',
+  'enjoy',
+  'sleep',
+  'code',
+  'enjoy',
+  'sleep',
+  'code'
+];
+
+function repeatCounter(list) {
+  const conteo = {};
+  for (let i = 0; i < list.length; i++) {
+    if (conteo[list[i]]) {
+      conteo[list[i]]++;
+    } else {
+      conteo[list[i]] = 1;
+    }
+  }
+  return conteo;
+}
+
+// EJERCICIO 15
+const products = [
+  "Camiseta de Metallica",
+  "Pantalón vaquero",
+  "Gorra de beisbol",
+  "Camiseta de Basket",
+  "Cinturón de Orión",
+  "AC/DC Camiseta",
+];
+
+for (let i = 0; i < products.length; i++) {
+  if (products[i].includes("Camiseta")) {
+    console.log(products[i]);
+  }
+}
+
+// EJERCICIO 16
+const placesToTravel = [
+  "Japon",
+  "Venecia",
+  "Murcia",
+  "Santander",
+  "Filipinas",
+  "Madagascar",
+];
+
+for (const lugar of placesToTravel) {
+  console.log(lugar);
+}
+
+// EJERCICIO 17
+const alien = {
+    name: 'Xenomorph',
+    species: 'Xenomorph XX121',
+    origin: 'Unknown',
+    weight: 180
+};
+
+for (const propiedad in alien) {
+  console.log("La propiedad " + propiedad + " tiene cómo valor: " + alien[propiedad]);
+}
+
+// EJERCICIO 18
+const placesToTravel2 = [
+  { id: 5, name: "Japan" },
+  { id: 11, name: "Venecia" },
+  { id: 23, name: "Murcia" },
+  { id: 40, name: "Santander" },
+  { id: 44, name: "Filipinas" },
+  { id: 59, name: "Madagascar" },
+];
+
+for (let i = placesToTravel2.length - 1; i >= 0; i--) {
+  if (placesToTravel2[i].id === 11 || placesToTravel2[i].id === 40) {
+    placesToTravel2.splice(i, 1);
+  }
+}
+console.log(placesToTravel2);
+
+// EJERCICIO 19
+const toys = [
+    {id: 5, name: 'Transformers'},
+    {id: 11, name: 'LEGO'},
+    {id: 23, name: 'Hot Wheels'},
+    {id: 40, name: 'Rascador de gato'},
+    {id: 40, name: 'FurReal Friends gato interactivo'},
+    {id: 60, name: 'Nerf Blaster'},
+    {id: 71, name: 'Sylvanian Families - Familia gato'}
+];
+
+const toysSinGato = [];
+for (const juguete of toys) {
+  if (!juguete.name.includes("gato")) {
+    toysSinGato.push(juguete);
+  }
+}
+console.log(toysSinGato);
+
+// EJERCICIO 20
+const popularToys = [];
+
+const toys2 = [
+    {id: 101, name: 'Super Soaker', sellCount: 15},
+    {id: 102, name: 'Tamagotchi', sellCount: 22},
+    {id: 103, name: 'Polly Pocket', sellCount: 8},
+    {id: 104, name: 'Yo-yo', sellCount: 33},
+    {id: 105, name: 'Pikachu plush toy', sellCount: 19},
+    {id: 106, name: "Rubik's Cube", sellCount: 27},
+    {id: 107, name: 'Fidget Spinner', sellCount: 12},
+    {id: 108, name: 'Slinky', sellCount: 5},
+    {id: 109, name: 'Magic 8-Ball', sellCount: 38},
+    {id: 110, name: 'Troll Doll', sellCount: 20}
+];
+
+for (const juguete of toys2) {
+  if (juguete.sellCount > 15) {
+    popularToys.push(juguete);
+  }
+}
+console.log(popularToys);
+
+// EJERCICIO 21
+const users = [
+  { name: "Tony", years: 43 },
+  { name: "Peter", years: 18 },
+  { name: "Natasha", years: 14 },
+  { name: "Bruce", years: 32 },
+  { name: "Khamala", years: 16 },
+];
+
+console.log("Usuarios menores de edad:");
+for (let i = 0; i < users.length; i++) {
+  if (users[i].years < 18) {
+    console.log(users[i].name);
+  }
+}
+
+console.log("Usuarios mayores de edad:");
+for (let i = 0; i < users.length; i++) {
+  if (users[i].years >= 18) {
+    console.log(users[i].name);
+  }
+}
+
+// EJERCICIO 22
+const fruits = ["Strawberry", "Banana", "Orange", "Apple"];
+
+const foodSchedule = [
+  { name: "Heura", isVegan: true },
+  { name: "Salmon", isVegan: false },
+  { name: "Tofu", isVegan: true },
+  { name: "Burger", isVegan: false },
+  { name: "Rice", isVegan: true },
+  { name: "Pasta", isVegan: true },
+];
+
+let indiceFruta = 0;
+for (let i = 0; i < foodSchedule.length; i++) {
+  if (!foodSchedule[i].isVegan) {
+    foodSchedule[i].name = fruits[indiceFruta];
+    foodSchedule[i].isVegan = true;
+    indiceFruta++;
+  }
+}
+console.log(foodSchedule);
+
+// EJERCICIO 23
+const movies = [
+  { name: "Titan A.E.", durationInMinutes: 130 },
+  { name: "Nightmare before Christmas", durationInMinutes: 225 },
+  { name: "Inception", durationInMinutes: 165 },
+  { name: "The Lord of the Rings", durationInMinutes: 967 },
+  { name: "Star Wars: A New Hope", durationInMinutes: 214 },
+  { name: "Terminator", durationInMinutes: 140 },
+  { name: "Spirited Away", durationInMinutes: 80 },
+  { name: "The Matrix", durationInMinutes: 136 },
+  { name: "Amélie", durationInMinutes: 110 },
+  { name: "Eternal Sunshine of the Spotless Mind", durationInMinutes: 108 },
+];
+
+const peliculasPequenas = [];
+const peliculasMedianas = [];
+const peliculasGrandes = [];
+
+for (let i = 0; i < movies.length; i++) {
+  if (movies[i].durationInMinutes < 100) {
+    peliculasPequenas.push(movies[i]);
+  } else if (movies[i].durationInMinutes >= 100 && movies[i].durationInMinutes < 200) {
+    peliculasMedianas.push(movies[i]);
+  } else {
+    peliculasGrandes.push(movies[i]);
+  }
+}
+
+console.log(peliculasPequenas);
+console.log(peliculasMedianas);
+console.log(peliculasGrandes);
+
+// EJERCICIO 24
+const characters = [
+  { name: 'Luke Skywalker', species: 'Human' },
+  { name: 'Darth Vader', species: 'Human' },
+  { name: 'Chewbacca', species: 'Wookiee' },
+  { name: 'Leia Organa', species: 'Human' },
+  { name: 'R2-D2', species: 'Droid' },
+  { name: 'C-3PO', species: 'Droid' },
+  { name: 'Obi-Wan Kenobi', species: 'Human' },
+  { name: 'Yoda', species: 'Unknown' },
+  { name: 'Han Solo', species: 'Human' }
+];
+const humanCharacters = [];
+
+for (let i = 0; i < characters.length; i++) {
+  if (characters[i].species === 'Human') {
+    humanCharacters.push(characters[i]);
+  }
+}
+console.log(humanCharacters);
+
+// EJERCICIO 25
+const movies2 = [
+  { title: 'The Matrix', releaseYear: 1999 },
+  { title: 'Star Wars: Episode IV – A New Hope', releaseYear: 1977 },
+  { title: 'Inception', releaseYear: 2010 },
+  { title: 'Jurassic Park', releaseYear: 1993 },
+  { title: 'The Shawshank Redemption', releaseYear: 1994 },
+  { title: 'Pulp Fiction', releaseYear: 1994 },
+  { title: 'Avatar', releaseYear: 2009 },
+  { title: 'The Dark Knight', releaseYear: 2008 },
+  { title: 'Fight Club', releaseYear: 1999 },
+  { title: 'Forrest Gump', releaseYear: 1994 }
+];
+
+let antesDelAnio2000 = 0;
+let despuesDelAnio2000 = 0;
+
+for (let i = 0; i < movies2.length; i++) {
+  if (movies2[i].releaseYear < 2000) {
+    antesDelAnio2000++;
+  } else {
+    despuesDelAnio2000++;
+  }
+}
+
+console.log("Antes del 2000: " + antesDelAnio2000);
+console.log("Después del 2000: " + despuesDelAnio2000);
+
+// EJERCICIO 26
+const songs = [
+  { title: 'Bohemian Rhapsody', genre: 'Rock', duration: 5.55 },
+  { title: 'Stairway to Heaven', genre: 'Rock', duration: 7.58 },
+  { title: 'Billie Jean', genre: 'Pop', duration: 4.54 },
+  { title: 'Hotel California', genre: 'Rock', duration: 6.31 },
+  { title: 'Sweet Child o Mine', genre: 'Rock', duration: 5.56 },
+  { title: 'Smells Like Teen Spirit', genre: 'Rock', duration: 5.01 },
+  { title: 'Comfortably Numb', genre: 'Rock', duration: 6.23 },
+  { title: 'Wish You Were Here', genre: 'Rock', duration: 5.34 },
+  { title: 'Black Dog', genre: 'Rock', duration: 4.54 },
+  { title: 'Thunderstruck', genre: 'Rock', duration: 4.52 },
+  { title: 'Crazy Love', genre: 'Pop', duration: 3.52 },
+];
+const rockPlaylist = [];
+
+for (const cancion of songs) {
+  if (cancion.genre === 'Rock' && cancion.duration > 5) {
+    rockPlaylist.push(cancion);
+  }
+}
+console.log(rockPlaylist);
+
+// EJERCICIO 27
+const cartoons = [
+  { name: 'Bugs Bunny', debut: 1938 },
+  { name: 'SpongeBob SquarePants', debut: 1999 },
+  { name: 'Tom and Jerry', debut: 1940 },
+  { name: 'Mickey Mouse', debut: 1928 },
+  { name: 'Scooby-Doo', debut: 1969 },
+  { name: 'The Flintstones', debut: 1960 },
+  { name: 'Batman: The Animated Series', debut: 1992 },
+  { name: 'The Simpsons', debut: 1989 },
+  { name: 'Pokémon', debut: 1997 },
+  { name: "Dexter's Laboratory", debut: 1996 }
+];
+
+let masAntiguo = cartoons[0];
+for (let i = 1; i < cartoons.length; i++) {
+  if (cartoons[i].debut < masAntiguo.debut) {
+    masAntiguo = cartoons[i];
+  }
+}
+console.log(masAntiguo.name);
+
+// EJERCICIO 28
+const albums = [
+  { title: 'Led Zeppelin IV', genre: 'Rock', duration: 42.19 },
+  { title: 'The Dark Side of the Moon', genre: 'Rock', duration: 42.49 },
+  { title: 'Back in Black', genre: 'Rock', duration: 42.11 },
+  { title: 'Hotel California', genre: 'Rock', duration: 43.08 },
+  { title: 'Abbey Road', genre: 'Rock', duration: 47.23 },
+  { title: 'Thriller', genre: 'Pop', duration: 42.19 },
+  { title: 'A Night at the Opera', genre: 'Rock', duration: 43.08 },
+  { title: 'The Wall', genre: 'Rock', duration: 81.00 },
+  { title: 'Born to Run', genre: 'Rock', duration: 39.26 },
+  { title: 'The Joshua Tree', genre: 'Rock', duration: 50.11 }
+];
+
+let duracionTotalRock = 0;
+for (let i = 0; i < albums.length; i++) {
+  if (albums[i].genre === 'Rock') {
+    duracionTotalRock += albums[i].duration;
+  }
+}
+console.log(duracionTotalRock);
+
+// EJERCICIO 29
+const starWarsMovies = [
+  { title: 'A New Hope', releaseYear: 1977 },
+  { title: 'The Empire Strikes Back', releaseYear: 1980 },
+  { title: 'Return of the Jedi', releaseYear: 1983 },
+  { title: 'The Phantom Menace', releaseYear: 1999 },
+  { title: 'Attack of the Clones', releaseYear: 2002 },
+  { title: 'Revenge of the Sith', releaseYear: 2005 },
+  { title: 'The Force Awakens', releaseYear: 2015 },
+  { title: 'The Last Jedi', releaseYear: 2017 },
+  { title: 'The Rise of Skywalker', releaseYear: 2019 },
+  { title: 'Rogue One', releaseYear: 2016 },
+  { title: 'Solo', releaseYear: 2018 }
+];
+
+const peliculasPorDecada = {};
+for (let i = 0; i < starWarsMovies.length; i++) {
+  const decada = Math.floor(starWarsMovies[i].releaseYear / 10) * 10;
+  if (!peliculasPorDecada[decada]) {
+    peliculasPorDecada[decada] = [];
+  }
+  peliculasPorDecada[decada].push(starWarsMovies[i]);
+}
+console.log(peliculasPorDecada);
+
+// EJERCICIO 30
+const tracks = [
+  { title: 'Enter Sandman', genre: 'Metal' },
+  { title: 'Back in Black', genre: 'Rock' },
+  { title: 'Bohemian Rhapsody', genre: 'Rock' },
+  { title: 'Blinding Lights', genre: 'Pop' },
+  { title: 'Old Town Road', genre: 'Country' },
+  { title: 'Smells Like Teen Spirit', genre: 'Grunge' },
+  { title: 'Bad Guy', genre: 'Pop' },
+  { title: 'Thunderstruck', genre: 'Rock' },
+  { title: 'Hotel California', genre: 'Rock' },
+  { title: 'Stairway to Heaven', genre: 'Rock' }
+];
+
+const cancionesPorGenero = {};
+for (const cancion of tracks) {
+  if (!cancionesPorGenero[cancion.genre]) {
+    cancionesPorGenero[cancion.genre] = [];
+  }
+  cancionesPorGenero[cancion.genre].push(cancion);
+}
+console.log(cancionesPorGenero);
+
+// EJERCICIO 31
+const artists = [
+  { name: 'Kurt Cobain', influences: ['The Beatles', 'Pixies', 'Lead Belly'] },
+  { name: 'David Bowie', influences: ['Little Richard', 'Chuck Berry', 'The Velvet Underground'] },
+  { name: 'Eddie Vedder', influences: ['The Who', 'Neil Young', 'Jim Morrison'] },
+  { name: 'Freddie Mercury', influences: ['Liza Minnelli', 'Jimi Hendrix', 'Aretha Franklin'] },
+  { name: 'John Lennon', influences: ['Elvis Presley', 'Chuck Berry', 'Buddy Holly'] }
+];
+
+for (const artista of artists) {
+  for (const influencia of artista.influences) {
+    console.log(artista.name + " fue influenciado por " + influencia);
+  }
+}
+
+// EJERCICIO 32
+const xMen = [
+  { name: 'Wolverine', year: 1974 },
+  { name: 'Cyclops', year: 1963 },
+  { name: 'Storm', year: 1975 },
+  { name: 'Phoenix', year: 1963 },
+  { name: 'Beast', year: 1963 },
+  { name: 'Gambit', year: 1990 },
+  { name: 'Nightcrawler', year: 1975 },
+  { name: 'Magneto', year: 1963 },
+  { name: 'Professor X', year: 1963 },
+  { name: 'Mystique', year: 1978 }
+];
+
+function findOldestXMen(xMen) {
+  let masAntiguo = xMen[0];
+  for (let i = 1; i < xMen.length; i++) {
+    if (xMen[i].year < masAntiguo.year) {
+      masAntiguo = xMen[i];
+    }
+  }
+  return masAntiguo;
+}
+
+// EJERCICIO 33
+const capitals = {
+  Spain: 'Madrid',
+  France: 'Paris',
+  Italy: 'Rome',
+  Germany: 'Berlin',
+  Portugal: 'Lisbon',
+  Poland: 'Warsaw',
+  Greece: 'Athens',
+  Austria: 'Vienna',
+  Hungary: 'Budapest',
+  Ireland: 'Dublin'
+};
+
+function getCapital(country) {
+  if (capitals[country]) {
+    return capitals[country];
+  } else {
+    return "No se encuentra la capital de ese país";
+  }
+}
+
+// EJERCICIO 34
+const movies3 = [
+  { title: 'Inception', duration: 148 },
+  { title: 'The Dark Knight', duration: 152 },
+  { title: 'Interstellar', duration: 169 },
+  { title: 'Dunkirk', duration: 106 },
+  { title: 'The Prestige', duration: 130 },
+  { title: 'Memento', duration: 113 },
+  { title: 'Batman Begins', duration: 140 },
+  { title: 'The Dark Knight Rises', duration: 164 },
+  { title: 'Tenet', duration: 150 },
+  { title: 'Insomnia', duration: 118 }
+];
+
+function averageMovieDuration(movies) {
+  let suma = 0;
+  for (let i = 0; i < movies.length; i++) {
+    suma += movies[i].duration;
+  }
+  return suma / movies.length;
+}
+
+// EJERCICIO 35
+const mutants = [
+  { name: 'Wolverine', power: 'regeneration' },
+  { name: 'Magneto', power: 'magnetism' },
+  { name: 'Professor X', power: 'telepathy' },
+  { name: 'Jean Grey', power: 'telekinesis' },
+  { name: 'Rogue', power: 'power absorption' },
+  { name: 'Storm', power: 'weather manipulation' },
+  { name: 'Mystique', power: 'shape-shifting' },
+  { name: 'Beast', power: 'superhuman strength' },
+  { name: 'Colossus', power: 'steel skin' },
+  { name: 'Nightcrawler', power: 'teleportation' }
+];
+
+function findMutantByPower(mutants, power) {
+  const mutantesEncontrados = [];
+  for (let i = 0; i < mutants.length; i++) {
+    if (mutants[i].power === power) {
+      mutantesEncontrados.push(mutants[i].name);
+    }
+  }
+  if (mutantesEncontrados.length > 0) {
+    return "Se encontraron mutantes con el poder " + power + ": " + mutantesEncontrados.join(", ");
+  } else {
+    return "No se encontró ningún mutante con el poder " + power;
+  }
+}
+
+// EJERCICIO 36
+const actors = [
+  { name: 'Leonardo DiCaprio', born: 1974 },
+  { name: 'Tom Hanks', born: 1956 },
+  { name: 'Meryl Streep', born: 1949 },
+  { name: 'Brad Pitt', born: 1963 },
+  { name: 'Johnny Depp', born: 1963 },
+  { name: 'Scarlett Johansson', born: 1984 },
+  { name: 'Jennifer Lawrence', born: 1990 },
+  { name: 'Denzel Washington', born: 1954 },
+  { name: 'Morgan Freeman', born: 1937 },
+  { name: 'Cate Blanchett', born: 1969 }
+];
+
+function calculateActorsAges(actors) {
+  const anioActual = new Date().getFullYear();
+  const actoresConEdad = [];
+  for (let i = 0; i < actors.length; i++) {
+    const edad = anioActual - actors[i].born;
+    actoresConEdad.push({name: actors[i].name, age: edad});
+  }
+  return actoresConEdad;
+}
+
+// EJERCICIO 37
+const movies4 = [
+  {
+    title: "Bracula: Condemor II",
+    duration: 192,
+    categories: ["comedia", "aventura"],
+  },
+  {
+    title: "Spider-Man: No Way Home",
+    duration: 122,
+    categories: ["aventura", "acción"],
+  },
+  {
+    title: "The Voices",
+    duration: 223,
+    categories: ["comedia", "thriller"],
+  },
+  {
+    title: "Shrek",
+    duration: 111,
+    categories: ["comedia", "aventura", "animación"],
+  },
+];
+
+const categorias = [];
+for (const pelicula of movies4) {
+  for (const categoria of pelicula.categories) {
+    if (!categorias.includes(categoria)) {
+      categorias.push(categoria);
+    }
+  }
+}
+console.log(categorias);
+
+// EJERCICIO 38
+const users2 = [
+  {
+    name: "Alberto",
+    favoritesSounds: {
+      waves: { format: "mp3", volume: 50 },
+      rain: { format: "ogg", volume: 60 },
+      firecamp: { format: "mp3", volume: 80 },
+    },
+  },
+  {
+    name: "Antonio",
+    favoritesSounds: {
+      waves: { format: "mp3", volume: 30 },
+      shower: { format: "ogg", volume: 55 },
+      train: { format: "mp3", volume: 60 },
+    },
+  },
+  {
+    name: "Santiago",
+    favoritesSounds: {
+      shower: { format: "mp3", volume: 50 },
+      train: { format: "ogg", volume: 60 },
+      firecamp: { format: "mp3", volume: 80 },
+    },
+  },
+  {
+    name: "Laura",
+    favoritesSounds: {
+      waves: { format: "mp3", volume: 67 },
+      wind: { format: "ogg", volume: 35 },
+      firecamp: { format: "mp3", volume: 60 },
+    },
+  },
+];
+
+let sumaVolumenes = 0;
+let cantidadSonidos = 0;
+
+for (const usuario of users2) {
+  for (const sonido in usuario.favoritesSounds) {
+    sumaVolumenes += usuario.favoritesSounds[sonido].volume;
+    cantidadSonidos++;
+  }
+}
+
+const mediaVolumen = sumaVolumenes / cantidadSonidos;
+console.log(mediaVolumen);
+
+// EJERCICIO 39
+const users3 = [
+  {
+    name: "Alberto",
+    favoritesSounds: {
+      waves: { format: "mp3", volume: 50 },
+      rain: { format: "ogg", volume: 60 },
+      firecamp: { format: "mp3", volume: 80 },
+    },
+  },
+  {
+    name: "Antonio",
+    favoritesSounds: {
+      waves: { format: "mp3", volume: 30 },
+      shower: { format: "ogg", volume: 55 },
+      train: { format: "mp3", volume: 60 },
+    },
+  },
+  {
+    name: "Santiago",
+    favoritesSounds: {
+      shower: { format: "mp3", volume: 50 },
+      train: { format: "ogg", volume: 60 },
+      firecamp: { format: "mp3", volume: 80 },
+    },
+  },
+  {
+    name: "Laura",
+    favoritesSounds: {
+      waves: { format: "mp3", volume: 67 },
+      wind: { format: "ogg", volume: 35 },
+      firecamp: { format: "mp3", volume: 60 },
+    },
+  },
+];
+
+const conteoSonidos = {};
+
+for (const usuario of users3) {
+  for (const sonido in usuario.favoritesSounds) {
+    if (conteoSonidos[sonido]) {
+      conteoSonidos[sonido]++;
+    } else {
+      conteoSonidos[sonido] = 1;
+    }
+  }
+}
+
+console.log(conteoSonidos);
+
+// EJERCICIO 40
+function findArrayIndex(array, text) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === text) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+const mainCharacters = [
+  "Luke",
+  "Leia",
+  "Han Solo",
+  "Chewbacca",
+  "Rey",
+  "Anakin",
+  "Obi-Wan",
+];
+
+function removeItem(array, text) {
+  const indice = findArrayIndex(array, text);
+  if (indice !== -1) {
+    array.splice(indice, 1);
+  }
+  return array;
+}
+
+// EJERCICIO 41
+function rollDice(caras) {
+  return Math.floor(Math.random() * caras) + 1;
+}
+
+// EJERCICIO 42
+const fantasticFour = [
+  "La antorcha humana",
+  "Mr. Fantástico",
+  "La mujer invisible",
+  "La cosa",
+];
+
+function swap(array, indice1, indice2) {
+  const temp = array[indice1];
+  array[indice1] = array[indice2];
+  array[indice2] = temp;
+  return array;
+}
